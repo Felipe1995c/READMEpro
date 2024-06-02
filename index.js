@@ -9,6 +9,11 @@ inquirer.prompt([
 },
 {
     type: 'input',
+    message: 'Describe what your application was designed for',
+    name: 'description'
+},
+{
+    type: 'input',
     message: 'What is your TASK?',
     name: 'your-task'
 },

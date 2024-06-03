@@ -70,3 +70,5 @@ Here are some guidelines to help you get started:
 
 * The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
 
+that matches the user input and has a functioning table of contents.
+

@@ -22,9 +22,10 @@ const questions =([
         name: 'user-story'
     },
     {
-        type: 'input',
-        message: 'Insert table of contents.',
-        name: 'tableContent'
+        type: 'confirm',
+        message: 'Would you like to insert a table of contents?',
+        name: 'tableContent',
+        default: true
     },
     {
         type: 'input',
@@ -64,7 +65,28 @@ const questions =([
     }
 
 ]);
+function generateAnchorLink(text) {
+    return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+}
+
+function generateTableOfContents(answers) {
+    return `
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Mock Up](#mock-up)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
+`;
+}
+
 function generateREADME(answers) {
+    let tableOfContents = '';
+    if (answers.includeTableOfContents) {
+        tableOfContents = generateTableOfContents(answers);
+    }
     return `
 # ${answers.title}
 
@@ -72,7 +94,7 @@ function generateREADME(answers) {
 ${answers.description}
 
 ## Table of Contents
-${answers.tableContent}
+${generateTableOfContents(answers)}
 
 ## Installation
 ${answers.installation}

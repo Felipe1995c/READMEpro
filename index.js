@@ -8,7 +8,7 @@ const questions =([
     },
     {
         type: 'input',
-        message: 'Describe what your application was designed for',
+        message: 'Describe what your application was designed for?',
         name: 'description'
     },
     {
@@ -23,8 +23,8 @@ const questions =([
     },
     {
         type: 'input',
-        message: 'Table of contents',
-        name: 'table-content'
+        message: 'Insert table of contents.',
+        name: 'tableContent'
     },
     {
         type: 'input',
@@ -38,12 +38,12 @@ const questions =([
     },
     {
         type: 'input',
-        message: 'Usage... what can your app do and how to use it.',
+        message: 'Usage... what can your app do and how to use it?',
         name: 'usage'
     },
     {
         type: 'input',
-        message: "Don't forget to add mock up images of app",
+        message: "Don't forget to add mock up images of app!",
         name: 'mock-up'
     },
     {
@@ -54,12 +54,12 @@ const questions =([
     },
     {
         type: 'input',
-        message: 'Where any tests done to find or fix bugs',
+        message: 'Where any tests done to find or fix bugs?',
         name: 'tests'
     },
     {
         type: 'input',
-        message: 'Any Questions',
+        message: 'Any Questions?',
         name: 'questions'
     }
 
@@ -72,7 +72,7 @@ function generateREADME(answers) {
 ${answers.description}
 
 ## Table of Contents
-${answers.table-content}
+${answers.tableContent}
 
 ## Installation
 ${answers.installation}
